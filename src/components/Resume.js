@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Form } from 'semantic-ui-react'
 export default  class Resume extends Component {
   render() {
     let resumeData = this.props.resumeData;
