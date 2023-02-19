@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from './welcomelogo.png';
 export default class Header extends Component {
   render() {
     let resumeData = this.props.resumeData;
@@ -12,32 +13,16 @@ export default class Header extends Component {
             <ul id="nav" className="nav">
                <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
                <li><a className="smoothscroll" href="#about">About</a></li>
-             <li><a className="smoothscroll" href="#resume">Resume</a></li>
-               <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-               <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
+             <li><a className="smoothscroll" href="#resume">Book</a></li>
+               <li><a className="smoothscroll" href="#portfolio">ChatAI</a></li>
+               <li><a className="smoothscroll" href="#testimonials">Login/Signup</a></li>
                <li><a className="smoothscroll" href="#contact">Contact</a></li>
             </ul>
          </nav>
 
          <div className="row banner">
-            <div className="banner-text">
-               <h1 className="responsive-headline">I am {resumeData.name}.</h1>
-               <h3 style={{color:'#fff', fontFamily:'sans-serif '}}>I am a {resumeData.role}.{resumeData.roleDescription}
-               </h3>
-               <hr/>
-               <ul className="social">
-                  {
-                    resumeData.socialLinks && resumeData.socialLinks.map(item =>{
-                      return(
-                              <li key={item.name}>
-                                <a href={item.url} target="_blank"><i className={item.className}></i></a>
-                              </li>
-                            )
-                          }
-                    )
-                  }
-               </ul>
-            </div>
+         <img className="profile" src={logo} width="500" height="500" />
+            
          </div>
 
          <p className="scrolldown">

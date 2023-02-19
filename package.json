@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "moment": "^2.29.4",
+    "openai": "^3.1.0",
     "react": "^16.6.0",
+    "react-bootstrap": "^2.7.2",
+    "react-calendar": "^4.0.0",
+    "react-datepicker": "^4.10.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.1.1"
+    "react-scripts": "^5.0.1",
+    "semantic-ui-react": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
