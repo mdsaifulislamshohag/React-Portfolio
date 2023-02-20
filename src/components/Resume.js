@@ -1,98 +1,55 @@
 import React, { Component } from 'react';
-export default  class Resume extends Component {
+import "./formstyles.css";
+import { useState } from "react";
+import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css';
+import moment from 'moment'
+
+
+
+
+export default class Resume extends Component {
+
   render() {
-    let resumeData = this.props.resumeData;
+    
+
+
     return (
       <section id="resume">
 
-         <div className="row education">
+        <div className="row education">
 
-            <div className="three columns header-col">
-               <h1><span>Education</span></h1>
-            </div>
-
-            <div className="nine columns main-col">
-              {
-                resumeData.education && resumeData.education.map((item)=>{
-                  return(
-                    <div className="row item">
-                       <div className="twelve columns">
-                          <h3>{item.UniversityName}</h3>
-                          <p className="info">
-                          {item.specialization}
-                          <span>&bull;</span> <em className="date">{item.MonthOfPassing} {item.YearOfPassing}</em></p>
-                          <p>
-                          {item.Achievements}
-                          </p>
-                       </div>
-                    </div>
-                  )
-                })
-              }
-            </div>
-         </div>
-        <div className="row work">
-            <div className="three columns header-col">
-               <h1><span>Work</span></h1>
-            </div>
-
-            <div className="nine columns main-col">
-              {
-                resumeData.work && resumeData.work.map((item) => {
-                  return(
-                    <div className="row item">
-                       <div className="twelve columns">
-                          <h3>{item.CompanyName}</h3>
-                          <p className="info">
-                          {item.specialization}
-                          <span>&bull;</span> <em className="date">{item.MonthOfLeaving} {item.YearOfLeaving}</em></p>
-                          <p>
-                          {item.Achievements}
-                          </p>
-                       </div>
-
-                    </div>
-
-                  )
-                })
-              }
-            </div> 
-         </div>
+          <div>
+            <h1>Book An Appointment</h1>
+          </div>
+          <div>
+            <form class="form-inline" >
+              <label for="email">Last Name</label>
+              <input type="email" id="email" placeholder="Enter Last Name" name="email"></input>
+              <label for="pwd">First Name</label>
+              <input type="password" id="pwd" placeholder="Enter First Name" name="pswd"></input>
+              <label for="country">Country</label>
+              <select name="country">
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+                <option value="usa">USA</option>
+              </select>
+            </form>
+          </div>
+          
 
 
-         <div className="row skill">
 
-            <div className="three columns header-col">
-               <h1><span>Skills</span></h1>
-            </div>
 
-            <div className="nine columns main-col">
 
-               <p>
-               {resumeData.skillsDescription}
-               </p>
 
-   				<div className="bars">
 
-   				   <ul className="skills">
-                {
-                  resumeData.skills && resumeData.skills.map((item) => {
-                    return(
-                      <li>
-                      <span className={`bar-expand ${item.skillname.toLowerCase()}`}>
-                      </span><em>{item.skillname}</em>
-                      </li>
-                    )
-                  })
-                }
 
-   					</ul>
+        </div>
 
-   				</div>
 
-   			</div>
 
-         </div>
+
 
       </section>
     );
