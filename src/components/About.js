@@ -34,7 +34,7 @@ export default class About extends Component {
                     <br></br>
                     <span>Avedis Boudakian</span>
                     <br></br>
-                    <span>Rodrigo Delaguila</span>
+                    <span>Rodrigo Del Aguila</span>
        					   </p>
                   </div>
                </div>
